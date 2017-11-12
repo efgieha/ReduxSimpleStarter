@@ -1,0 +1,14 @@
+version: "2"
+services:
+  node:
+    container_name: dev_react
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/usr/src/app:cached
+    ports:
+      - "8080:8080"
+    tty: true
