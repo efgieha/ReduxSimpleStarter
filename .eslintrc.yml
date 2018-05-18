@@ -1,0 +1,9 @@
+extends: airbnb
+env:
+  browser: true
+  es6: true
+rules: 
+  react/prefer-stateless-function:
+    - ignorePureComponents: true
+  react/jsx-filename-extension:
+    - 0

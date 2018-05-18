@@ -1,7 +1,5 @@
 module.exports = {
-  entry: [
-    './src/index.js'
-  ],
+  entry: ['./src/index.js'],
   output: {
     path: __dirname,
     publicPath: '/',
@@ -14,13 +12,17 @@ module.exports = {
       query: {
         presets: ['react', 'es2015', 'stage-1']
       }
-    }]
+    ]
   },
   resolve: {
     extensions: ['.js', '.jsx']
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './',
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: 1000
+    }
   }
 };
